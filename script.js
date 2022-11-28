@@ -15,7 +15,7 @@ function display(title, author, id) {
   remove.forEach((item) => {
     item.addEventListener('click', () => {
       books = books.filter((book) => {
-        if (book.id !== item.classList[1]) {
+        if (book.id !== JSON.parse(item.classList[1])) {
           return true;
         }
 
