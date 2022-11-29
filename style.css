@@ -2,6 +2,41 @@
   font-family: 'Balsamiq Sans', cursive;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: 0 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer a {
+  color: blue;
+  text-decoration: none;
+}
+
+.navigation-bar a {
+  padding-right: 5px;
+  text-decoration: none;
+  color: black;
+  border-right: 2px solid black;
+}
+
+.navigation-bar .contact {
+  border-right: none;
+}
+
 .title {
   text-align: center;
 }
@@ -98,6 +133,27 @@ form input::placeholder {
   width: 40%;
   color: red;
   border: 2px solid red;
+}
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  border: 2px solid black;
+}
+
+footer h1,
+footer p {
+  margin: 0;
+}
+
+.blue {
+  color: blue !important;
 }
 
 .d-hide {
