@@ -8,6 +8,9 @@ class booksList {
     this.books = JSON.parse(localStorage.getItem('books')) || [];
   }
   addBook(title,author,id){
+    if(this.books){
+      bookList.classList.add('black-border');
+    }
     this.title = title;
     this.author = author;
     this.id = id;
@@ -17,11 +20,13 @@ class booksList {
   }
 
   display(title,author,id){
+    if(this.books){
+      bookList.classList.add('black-border');
+    }
     const li = document.createElement('li');
     li.id = id;
-    li.innerHTML = `<p>${title}</p>
-      <p>${author}</p>
-      <button class="remove ${id}">Remove</button><hr>`;
+    li.innerHTML = `<p class = "title-author">"${title}" by ${author} </p>
+      <button class="remove ${id}">Remove</button>`;
     bookList.appendChild(li);
     this.remove();
   }
@@ -38,6 +43,9 @@ class booksList {
           return false;
         });
         localStorage.setItem('books', JSON.stringify(this.books));
+        if(this.books.length == 0){
+          bookList.classList.remove('black-border');
+        }
         const liList = document.querySelectorAll('.book-list li');
         liList.forEach((item1) => {
           if (item1.id === item.classList[1]) {

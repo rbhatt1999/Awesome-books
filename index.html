@@ -5,18 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awesome Books</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Awesome Books</h1>
-  <ul class="book-list">
-  </ul>
-  <form>
-    <input type="Title" id = "title" name="title" placeholder="Title"><br><br>
-    <input type="author" id="author" name="author" placeholder="Author"><br><br>
-    <button id="submit"> Submit</button>
-  </form>
-  <span class="error-msg"></span>
-  <script src="./script.js"></script>
+  <section class="display-section">
+    <h1 class="title">All awesome Books</h1>
+    <ul class="book-list">
+    </ul>
+  </section>
+  <section class="input-section">
+    <div class="underline"></div>
+    <h2 class="headline">Add a new book</h2>
+    <form>
+      <input type="Title" id = "title" name="title" placeholder="Title">
+      <input type="author" id="author" name="author" placeholder="Author">
+      <button id="submit"> Add</button>
+    </form>
+    <span class="error-msg"></span>
+  </section>
+    <script src="./script.js"></script>
 </body>
 </html>
