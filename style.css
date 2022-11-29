@@ -30,8 +30,7 @@ button:hover {
   background-color: rgb(221, 221, 221);
 }
 
-button:active,
-button:focus {
+button:active {
   background-color: rgb(155, 153, 153);
 }
 
