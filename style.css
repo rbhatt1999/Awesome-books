@@ -76,6 +76,7 @@ form {
   flex-direction: column;
   gap: 12px;
   width: 40%;
+  min-width: 300px;
 }
 
 form input {
