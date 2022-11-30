@@ -2,6 +2,11 @@
   font-family: 'Balsamiq Sans', cursive;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -73,7 +78,7 @@ button:active {
   border: 5px solid rgb(76, 73, 73);
 }
 
-li {
+.book-list li {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -84,7 +89,7 @@ li {
   box-sizing: border-box;
 }
 
-li:nth-child(odd) {
+.book-list li:nth-child(odd) {
   background-color: rgb(221, 221, 221);
   border: 1px solid rgb(221, 221, 221);
 }
@@ -94,12 +99,6 @@ li:nth-child(odd) {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-}
-
-.underline {
-  width: 100px;
-  height: 20px;
-  border-bottom: 2px solid black;
 }
 
 .headline {
@@ -156,6 +155,38 @@ footer p {
   color: blue !important;
 }
 
+.date {
+  display: flex;
+  justify-content: end;
+}
+
+#time {
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section h1,
+.contact-section p,
+.contact-section ul {
+  max-width: 400px;
+}
+
+.contact-section p {
+  text-align: center;
+}
+
+.display-section,
+.input-section,
+.contact-section {
+  padding-top: 60px;
+}
+
 .d-hide {
-  display: none;
+  display: none !important;
 }

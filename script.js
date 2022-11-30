@@ -2,7 +2,8 @@ const bookList = document.querySelector('.book-list');
 const submit = document.querySelector('#submit');
 const errorMsg = document.querySelector('.error-msg');
 const formInput = document.querySelectorAll('form input');
-
+const navigation = document.querySelectorAll('.navigation-bar a');
+const section = document.querySelectorAll('section');
 class BooksList {
   constructor() {
     this.books = JSON.parse(localStorage.getItem('books')) || [];
