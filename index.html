@@ -11,13 +11,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>Awesome Books</h1>
+    <nav class="navigation-bar">
+      <a href="#" class="list blue">List</a>
+      <a href="#" class="list-add">Add new</a>
+      <a href="#" class="contact">Contact</a>
+    </nav>
+  </header>
+  <section class="date">
+    <div id="time"></div>
+  </section>
   <section class="display-section">
-    <h1 class="title">All awesome Books</h1>
+    <h2 class="title">All awesome Books</h1>
     <ul class="book-list">
     </ul>
   </section>
-  <section class="input-section">
-    <div class="underline"></div>
+  <section class="input-section d-hide">
     <h2 class="headline">Add a new book</h2>
     <form>
       <input type="Title" id = "title" name="title" placeholder="Title">
@@ -26,6 +36,22 @@
     </form>
     <span class="error-msg d-hide"></span>
   </section>
+  <section class="contact-section d-hide">
+    <h2>Contact information</h2>
+        <p>Do you have any questions or you just want to say <q>Hello</q>?
+          You can reach out to us!</p>
+        <ul>
+          <li>Our e-mail: rbhatt199924@gmail.com</li>
+          <li>Our phone number: +91 9911223344</li>
+          <li>Our address: Anand Vihar, New delhi, India</li>
+        </ul>
+  </section>
+  <footer>
+    <p>© Awesome book 2022 - Right reserved - by </p>
+    <a href="https://github.com/rbhatt1999">Rohit Bhatt</a>
+    <p> & </p>
+    <a href="https://github.com/Daniel-Kigozi">Daniel Kigozi</a>
+  </footer>
     <script src="./script.js"></script>
 </body>
 </html>

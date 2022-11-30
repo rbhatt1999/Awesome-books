@@ -2,7 +2,8 @@ const bookList = document.querySelector('.book-list');
 const submit = document.querySelector('#submit');
 const errorMsg = document.querySelector('.error-msg');
 const formInput = document.querySelectorAll('form input');
-
+const navigation = document.querySelectorAll('.navigation-bar a');
+const section = document.querySelectorAll('section');
 class BooksList {
   constructor() {
     this.books = JSON.parse(localStorage.getItem('books')) || [];
@@ -81,3 +82,36 @@ if (localStorage.getItem('books')) {
     books.display(item.title, item.author, item.id);
   });
 }
+
+function refreshTime() {
+  const timeDisplay = document.getElementById('time');
+  const dateString = new Date().toLocaleString();
+  const formattedString = dateString.replace(',', '-');
+  timeDisplay.textContent = formattedString;
+}
+refreshTime();
+setInterval(refreshTime, 1000);
+navigation[0].addEventListener('click', () => {
+  section[1].classList.remove('d-hide');
+  section[2].classList.add('d-hide');
+  section[3].classList.add('d-hide');
+  navigation[0].classList.add('blue');
+  navigation[1].classList.remove('blue');
+  navigation[2].classList.remove('blue');
+});
+navigation[1].addEventListener('click', () => {
+  section[2].classList.remove('d-hide');
+  section[1].classList.add('d-hide');
+  section[3].classList.add('d-hide');
+  navigation[1].classList.add('blue');
+  navigation[0].classList.remove('blue');
+  navigation[2].classList.remove('blue');
+});
+navigation[2].addEventListener('click', () => {
+  section[3].classList.remove('d-hide');
+  section[2].classList.add('d-hide');
+  section[1].classList.add('d-hide');
+  navigation[2].classList.add('blue');
+  navigation[1].classList.remove('blue');
+  navigation[0].classList.remove('blue');
+});
