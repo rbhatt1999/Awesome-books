@@ -84,14 +84,14 @@ if (localStorage.getItem('books')) {
 }
 
 function refreshTime() {
-  const timeDisplay = document.getElementById("time");
+  const timeDisplay = document.getElementById('time');
   const dateString = new Date().toLocaleString();
-  const formattedString = dateString.replace(',','-');
+  const formattedString = dateString.replace(',', '-');
   timeDisplay.textContent = formattedString;
 }
 refreshTime();
 setInterval(refreshTime, 1000);
-navigation[0].addEventListener('click', ()=>{
+navigation[0].addEventListener('click', () => {
   section[1].classList.remove('d-hide');
   section[2].classList.add('d-hide');
   section[3].classList.add('d-hide');
@@ -99,7 +99,7 @@ navigation[0].addEventListener('click', ()=>{
   navigation[1].classList.remove('blue');
   navigation[2].classList.remove('blue');
 });
-navigation[1].addEventListener('click', ()=>{
+navigation[1].addEventListener('click', () => {
   section[2].classList.remove('d-hide');
   section[1].classList.add('d-hide');
   section[3].classList.add('d-hide');
@@ -107,7 +107,7 @@ navigation[1].addEventListener('click', ()=>{
   navigation[0].classList.remove('blue');
   navigation[2].classList.remove('blue');
 });
-navigation[2].addEventListener('click', ()=>{
+navigation[2].addEventListener('click', () => {
   section[3].classList.remove('d-hide');
   section[2].classList.add('d-hide');
   section[1].classList.add('d-hide');
