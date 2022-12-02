@@ -53,6 +53,7 @@ footer a {
   padding: 0;
   width: 90%;
   margin: auto;
+  overflow-y: scroll;
 }
 
 .title-author {
@@ -185,6 +186,7 @@ footer p {
 .input-section,
 .contact-section {
   padding-top: 60px;
+  padding-bottom: 90px;
 }
 
 .d-hide {
